@@ -36,7 +36,7 @@ class MealItem extends StatelessWidget {
   void selectMeal(BuildContext ctx) {
     Navigator.of(ctx).pushNamed('/meal-detail', arguments: {
       'id': meal.id,
-    });
+    }).then((result) => {print('Page Closed with a return value of mealID : ${result}')});
   }
 
   @override
